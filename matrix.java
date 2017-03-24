@@ -1,11 +1,13 @@
 package lab7;
 
 public class matrix {
-	private int max_size = 10;
-	private int n = 0;
-	private double [][] mdata = new double[max_size][max_size];
+	int max_size = 10;
+	int n = 0;
+	double [][] mdata = new double[max_size][max_size];
 	
 	public matrix(int num){
+		//System.out.println(num + "object");
+		//num = max_size;
 		n = num;
 	}
 	
@@ -32,17 +34,20 @@ public class matrix {
 	}//end determinant
 	
 	public matrix inverse(){
+		//System.out.println("enter");
 		matrix inv = new matrix(n);
+		//System.out.println("exit");
+		
 		double det = determinant();
 		
 		for (int i = 0; i < n; ++i)
 		{
 			for (int j = 0; j < n; ++j)
 			{
-				inv.mdata[i][j] = java.lang.Math.pow(-1.0, (double)i + j) * subMatrix(j, i).determinant() / det;
+				inv.mdata[i][j] = java.lang.Math.pow(-1.0, (double) i + j) * subMatrix(j, i).determinant() / det;
 			}
 		}
-		
+		//System.out.println("deeet" + det);
 		return inv;
 	}
 	
@@ -58,7 +63,7 @@ public class matrix {
 			for (int j = 0; j < n; ++j)
 			{
 				if (j == c) continue;
-				
+				//System.out.println(row + " " + col + " "+ i + " "+ j);
 				sub.mdata[row][col] = mdata[i][j];
 				++col;
 			}
