@@ -27,6 +27,7 @@ public class matrix {
 			for (int i = 0; i < n;i++)
 			{
 				det += java.lang.Math.pow(-1.0, (double)i) * mdata[0][i] * subMatrix(0, i).determinant();
+
 			}
 		}
 		
@@ -63,7 +64,8 @@ public class matrix {
 			for (int j = 0; j < n; ++j)
 			{
 				if (j == c) continue;
-				//System.out.println(row + " " + col + " "+ i + " "+ j);
+				//System.out.println( "submatrix with row,col,i,j = " + row + " " + col + " "+ r + " "+ c);
+				//System.out.println( "sub = "+ mdata[i][j]);
 				sub.mdata[row][col] = mdata[i][j];
 				++col;
 			}
