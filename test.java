@@ -11,27 +11,27 @@ import java.io.IOException;
 public class test {
 	
 		public static void main(String[] args){
-			//Scanner scan = new Scanner(System.in);
-			//out.formatln("Hello");
+
 			//int size_args = args.length;
 			
 			//check command parameters
-			/*if(size_args < 2 || size_args > 2){
-				out.formatln("Error - Expected usage: java name_of_class input.txt output.txt");
+/*			if(size_args < 2 || size_args > 2){
+				System.out.println("Error - Expected usage: java name_of_class input.txt output.txt");
 			}*/
 			
-			//file streams
+
+			try{
 			
+			//file streams
 			String input = args[0];
 			String output = args[1];
+			
+			Scanner x = new Scanner(new File(input));
 			
 			//String input = "C:/Users/Jhoel/workspace/lab7_eecs448/input.txt";
 			//String output = "C:/Users/Jhoel/workspace/lab7_eecs448/src/lab7/output.txt";
 			
 			String newLine = System.getProperty("line.separator");
-			
-			try{
-			Scanner x = new Scanner(new File(input));
 			//while(x.hasNext()){
 			//	out.format(x.next());
 			//}
