@@ -22,11 +22,11 @@ public class test {
 			
 			//file streams
 			
-			//String input = args[0];
-			//String output = args[1];
+			String input = args[0];
+			String output = args[1];
 			
-			String input = "C:/Users/Jhoel/workspace/lab7_eecs448/input.txt";
-			String output = "C:/Users/Jhoel/workspace/lab7_eecs448/src/lab7/output.txt";
+			//String input = "C:/Users/Jhoel/workspace/lab7_eecs448/input.txt";
+			//String output = "C:/Users/Jhoel/workspace/lab7_eecs448/src/lab7/output.txt";
 			
 			String newLine = System.getProperty("line.separator");
 			
